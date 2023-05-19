@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #cfcfcf;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("newwhite.jpg");
+  padding-top: 50px;
+  transition-duration: 0.4s;
+}
+.dark-mode{
+  color: white;
+}
+.dark-mode-button {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  background-color: white; /* Set the background color */
+color: black; /* Set the text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  opacity: 0.7;
+}
+
+.dark-mode-button:hover { /* Change background color on hover */
+  color:rgb(42, 188, 84); /* Change text color on hover */
+}
+.navMenu {
+  overflow: hidden;
+  position: fixed;
+  background-color: #cfcfcf;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+}
+
+.navMenu a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-flex;
+  flex-direction: column;
+  width: calc(100% / 4);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  }
+.navMenu a:hover  {
+  color:rgb(42, 188, 84);
+}
+.navMenu a.active {
+  color:rgb(42, 188, 84);
+}
+
+.box{
+    width: 450px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    font-family: 'Snell Roundhand', cursive;
+    font-size: large;
+  }
+.box-img{
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    }
+.box h1{
+font-size: 40px;
+letter-spacing: 4px;
+font-weight: 100;
+}
+
+.box p{
+    text-align: justify;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  .box li{
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+  }
+  .box li a{
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+    transition: all ease-in-out 250ms;
+  }
+  .box li a:hover{
+    color: #b9b9b9;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+  }

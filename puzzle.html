@@ -1,0 +1,153 @@
+@@ -0,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+     body {
+    background: #272727;
+    background-image: url(file:///D:/vs%20code/HW-I/images/index-background.jpg);
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 50px;
+    transition-duration: 0.4s;
+  }
+  .navMenu {
+    overflow: hidden;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navMenu a {
+    color: #f6f4e6;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-flex;
+    flex-direction: column;
+    width: calc(100% / 4);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    }
+  .navMenu a:hover {
+    color: #fddb3a;
+  }
+#div1 {
+  width: 150px;
+  height: 150px;
+  display:inline-block;
+position: absolute;
+background-color: aliceblue;
+top: 250px;
+margin: 0 auto;
+left: 150px;
+  border: 2px solid #aaaaaa;
+}
+#div2 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: aliceblue;
+  top: 250px;
+  left: 300px;
+  display:inline-block;
+  margin: 0 auto;
+  border: 2px solid #aaaaaa;
+}
+#div3 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: aliceblue;
+  top: 400px;
+  left: 150px;
+  margin: 0 auto;
+  border: 2px solid #aaaaaa;
+}
+#div4 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: aliceblue;
+  top: 400px;
+  left: 300px;
+  margin: 0 auto;
+  display:inline-block;
+  border: 2px solid #aaaaaa;
+}
+.img{
+    padding: 5px;
+    margin-left: 50px;
+    margin: 0 auto;
+}
+footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: white;
+    }
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<div>
+    <nav class="navMenu">
+        <a href="//D:/vs%20code/HW-I/index.html">Home</a>
+        <a href="file:///D:/vs%20code/HW-I/fun.html">Fun</a>
+        <a href="about.html">About</a>
+        <a href="feedback.html">Feedback</a>
+      </nav><br><br>
+</div>
+<body style="background-color: #1f242d;">
+
+<!-- <p>Drag the W3Schools image into the rectangle:</p> -->
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="img">
+    <img id="drag1" src="file:///D:/vs%20code/HW-I/images/image_part_002.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150">
+<img id="drag2" src="file:///D:/vs%20code/HW-I/images/image_part_003.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150">
+<img id="drag3" src="file:///D:/vs%20code/HW-I/images/image_part_004.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150">
+<img id="drag4" src="file:///D:/vs%20code/HW-I/images/image_part_001.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150">
+</div>
+<div class="btn">
+   <a href="filedragdrop.html"> <button style="padding: 50ox; margin-left: 700px; margin-top: 300px; background-color: #16a34a; width: 80px; height: 30px; border-radius: 10px;">submit</button>
+   </a>
+</div>
+<footer>
+    <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+
+
+</html>

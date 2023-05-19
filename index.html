@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+  <title>Introduce Myself</title>
+  <link id="cssFile" rel="stylesheet" href="index.css">
+</head>
+<body>
+  <nav class="navMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="activity.html">Activity</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
+  <script>
+    // Get the current page's filename
+    var currentPage = location.pathname.split("/").slice(-1)[0];
+  
+    // Get all navigation links
+    var navLinks = document.querySelectorAll(".navMenu a");
+  
+    // Iterate through each navigation link
+    navLinks.forEach(function(link) {
+      // Get the link's href attribute and extract the filename
+      var linkPage = link.getAttribute("href").split("/").slice(-1)[0];
+  
+      // Check if the link's href matches the current page
+      if (linkPage === currentPage) {
+        // Add the active class to the link
+        link.classList.add("active");
+      }
+    });
+  </script>
+  <br><br>
+  <button onclick="changeCSS()" class="dark-mode-button">Change Theme</button>
+  <script>
+    function changeCSS() {
+      var cssFile = document.getElementById("cssFile");
+      if (cssFile.getAttribute("href") === "index.css") {
+        cssFile.setAttribute("href", "index2.css");
+      } else {
+        cssFile.setAttribute("href", "index.css");
+      }
+    }
+  </script>
+  <div class="box">
+    <img src="profile.jpg" alt="" class="box-img">
+    <h1>I'm Utsav Patel</h1>
+    <p>Hello everyone!! Welcome to my Portfolio.</p>
+    <ul>
+      <li><a href="https://github.com/patel-utsav"><i class="fa fa-github" title="GitHub" aria-hidden="true"></i></a></li>
+      <li><a href="https://twitter.com/utsav_ptl/"><i class="fa fa-twitter" title="Twitter" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/patel.utsav._/"><i class="fa fa-instagram" title="Instagram" aria-hidden="true"></i></a></li>
+      <li><a href="mailto:2004patelutsav@gmail.com"><i class="fa fa-envelope-square" title="Gmail" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+  <footer>
+    <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>

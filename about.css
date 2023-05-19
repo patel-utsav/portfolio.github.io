@@ -1,0 +1,189 @@
+/* Global styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	/* Set background color and font family */
+	background: #272727;
+	background-size: cover;
+	background-image: url("index-background.jpg");
+	font-family: "Montserrat", sans-serif;
+	padding-top: 50px;
+	transition-duration: 0.4s;
+  }
+  
+  /* Navigation menu styles */
+  .navMenu {
+	/* Set fixed position at the top of the page */
+	overflow: hidden;
+	position: fixed;
+	background-color: black;
+	top: 0;
+	opacity: 0.7;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .navMenu a {
+	/* Set link styles */
+	color: #f6f4e6;
+	text-decoration: none;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: 500;
+	display: inline-flex;
+	flex-direction: column;
+	width: calc(100% / 4);
+	transition: all 0.2s ease-in-out;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .navMenu a:hover {
+	/* Set link hover styles */
+	color: coral;
+  }
+  
+  .navMenu a.active {
+	/* Set active link styles */
+	color: coral;
+  }
+  
+  /* Container styles */
+  .container {
+	/* Set container styles */
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #272727;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+	/* Set heading styles */
+	padding-top: 3%;
+	color: rgb(72, 109, 211);
+	text-align: center;
+	font-size: 70px;
+  }
+  
+  p {
+	/* Set paragraph styles */
+	color: azure;
+	font-size: 25px;
+	line-height: 1.5;
+	text-align: justify;
+  }
+  
+  table {
+	/* Set table styles */
+	border-radius: 25px;
+	margin-top: 50px;
+	border-collapse: collapse;
+	width: 80%;
+	border-width: 0cap;
+  }
+  
+  h3 {
+	/* Set subheading styles */
+	color: rgb(72, 109, 211);
+  }
+  
+  
+  thead {
+	/* Set table header styles */
+	background-color: rgb(0, 0, 0);
+	color: rgb(94, 129, 189);
+  }
+  
+  tbody tr {
+	/* Set table row styles */
+	color: rgb(239, 238, 238);
+  }
+  
+  th,
+  td {
+	/* Set table cell styles */
+	text-align: middle;
+	padding: 12px;
+  }
+  
+  th {
+	/* Set table header cell styles */
+	font-weight: bold;
+  }
+  
+  tbody tr:hover {
+	/* Set table row hover styles */
+	background-color: #000000;
+	opacity: 0.5;
+  }
+  
+  /* Carousel styles */
+  .carousel-inner {
+	/* Set carousel styles */
+	max-width: 800px;
+	margin: 0 auto;
+  }
+  
+  .carousel-item {
+	/* Set carousel item styles */
+	scroll-snap-align: center;
+	align-content: center;
+	margin-right: 20px;
+  }
+  
+  .carousel-item img {
+	/* Set carousel image styles */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel::-webkit-scrollbar {
+	/* Hide scrollbar */
+	display: none;
+  }
+  
+  /* "Back to top" button styles */
+  #topButton {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: rgb(72, 109, 211);
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+  }
+  
+  #topButton:hover {
+	/* Set "Back to top" button hover styles */
+	background-color: coral;
+  }
+  
+  footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+	color: white;
+  }

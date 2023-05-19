@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+  <title>Introduce Myself</title>
+  <link id="cssFile" rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <nav class="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="activity.html">Fun</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+      <script>
+        // Get the current page's filename
+        var currentPage = location.pathname.split("/").slice(-1)[0];
+      
+        // Get all navigation links
+        var navLinks = document.querySelectorAll(".navMenu a");
+      
+        // Iterate through each navigation link
+        navLinks.forEach(function(link) {
+          // Get the link's href attribute and extract the filename
+          var linkPage = link.getAttribute("href").split("/").slice(-1)[0];
+      
+          // Check if the link's href matches the current page
+          if (linkPage === currentPage) {
+            // Add the active class to the link
+            link.classList.add("active");
+          }
+        });
+      </script>
+      <br><br>
+
+    <form action="" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+      
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="">Select a rating</option>
+          <option value="1">1 star</option>
+          <option value="2">2 stars</option>
+          <option value="3">3 stars</option>
+          <option value="4">4 stars</option>
+          <option value="5">5 stars</option>
+        </select>
+      
+        <button type="submit">
+            <span class="text">Submit</span>
+          </button>
+      </form>
+      <script>
+        // Get the form element
+        const feedbackForm = document.querySelector('form');
+        
+        // Listen for the form submit event
+        feedbackForm.addEventListener('submit', function(event) {
+          // Prevent the form from submitting
+          event.preventDefault();
+        
+          // Get the form controls
+          const nameInput = feedbackForm.querySelector('#name');
+          const emailInput = feedbackForm.querySelector('#email');
+          const feedbackInput = feedbackForm.querySelector('#feedback');
+          const ratingInput = feedbackForm.querySelector('#rating');
+        
+          // Validate the name field
+          if (nameInput.value.trim() === '') {
+            alert('Please enter your name.');
+            nameInput.focus();
+            return false;
+          }
+        
+          // Validate the email field
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(emailInput.value.trim())) {
+            alert('Please enter a valid email address.');
+            emailInput.focus();
+            return false;
+          }
+        
+          // Validate the feedback field
+          if (feedbackInput.value.trim() === '') {
+            alert('Please enter your feedback.');
+            feedbackInput.focus();
+            return false;
+          }
+        
+          // Validate the rating field
+          if (ratingInput.value === '') {
+            alert('Please select a rating.');
+            ratingInput.focus();
+            return false;
+          }
+        
+          // Submit the form
+          feedbackForm.submit();
+        });
+        </script>
+
+  <footer>
+    <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
